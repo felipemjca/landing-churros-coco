@@ -1,0 +1,21 @@
+FOTOS PENDIENTES PARA LA LANDING DE CHURROS COCO
+=================================================
+
+Guardá en esta carpeta las fotos reales del negocio con estos nombres
+(despues, en index.html, borrá cada bloque .foto-placeholder y descomentá
+el <img> que está justo debajo, ya listo con su texto alternativo):
+
+1. hero-churros.jpg   -> Foto principal del hero (ideal cuadrada, min 800x800px)
+2. galeria-1.jpg      -> Churros recién hechos (celda grande, min 800x800px)
+3. galeria-2.jpg      -> Churros rellenos
+4. galeria-3.jpg      -> Bañados en chocolate
+5. galeria-4.jpg      -> Mini churros salados con salsa
+6. galeria-5.jpg      -> Frente del local
+
+Consejos:
+- Usá JPG comprimido (o WebP) de menos de ~300 KB por foto para que la
+  página cargue rápido.
+- Las fotos de la galería se recortan en cuadrado automáticamente
+  (object-fit: cover), así que centrá el producto en la toma.
+- Si conseguís el logo real en PNG con fondo transparente, se puede
+  reemplazar el logo de texto del encabezado por la imagen.

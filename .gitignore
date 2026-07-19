@@ -1,0 +1,6 @@
+# Herramientas locales de Claude Code (skills, preview server)
+.claude/
+
+# Basura de Windows
+Thumbs.db
+desktop.ini

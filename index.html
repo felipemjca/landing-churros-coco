@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ====== SEO BÁSICO ======
+       El <title> y la meta description son lo que Google muestra en los
+       resultados. Incluimos las ciudades porque las búsquedas van a ser
+       locales: "churros gualeguaychú", "churrería concepción del uruguay". -->
+  <title>Churros Coco — Churros artesanales en Gualeguaychú y Concepción del Uruguay</title>
+  <meta name="description" content="Churrería artesanal con locales en Gualeguaychú y Concepción del Uruguay. Churros simples, rellenos, bañados en chocolate y salados. Hacemos envíos: pedí por WhatsApp.">
+
+  <!-- Open Graph: cómo se ve el link al compartirlo por WhatsApp o redes. -->
+  <meta property="og:title" content="Churros Coco — Producción Artesanal">
+  <meta property="og:description" content="Churros artesanales recién hechos en Gualeguaychú y Concepción del Uruguay. Pedí los tuyos por WhatsApp, hacemos envíos.">
+  <meta property="og:type" content="website">
+  <!-- ✏️ PLACEHOLDER: cuando subas la página a un dominio, apuntá esto a una
+       foto real de churros (1200x630px ideal) para que el link se vea con imagen:
+  <meta property="og:image" content="https://TU-DOMINIO.com/img/og-churros.jpg">
+  -->
+
+  <!-- Favicon dibujado en SVG (la "C" sobre círculo amarillo). Cuando tengas
+       el logo real en imagen, podés reemplazarlo por un favicon.ico propio. -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23FFD23F'/%3E%3Ctext x='32' y='44' font-size='36' font-family='Georgia' text-anchor='middle' fill='%233B2313'%3EC%3C/text%3E%3C/svg%3E">
+
+  <!-- Tipografías: Poppins (títulos y texto, redondeada como en los flyers)
+       y Dancing Script (solo para la palabra "Churros" del logo). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Skip link: invisible salvo que se navegue con teclado (Tab). -->
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- ============================================================
+       ENCABEZADO + NAVEGACIÓN
+       ============================================================ -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+      <a href="#" class="logo" aria-label="Churros Coco, inicio">
+        <span class="logo__script">Churros</span>
+        <span class="logo__serif">COCO</span>
+      </a>
+
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <button
+          type="button"
+          class="nav-principal__toggle"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span class="sr-only">Abrir menú de navegación</span>
+          <span class="nav-principal__icono" aria-hidden="true"></span>
+        </button>
+
+        <ul id="menu-principal" class="nav-principal__lista">
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#por-que">¿Por qué Coco?</a></li>
+          <li><a href="#locales">Locales y horarios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto" class="boton boton--whatsapp boton--pequeno">Pedir por WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+
+    <!-- ============================================================
+         1. HERO
+         Fondo amarillo de marca (como los flyers de Instagram),
+         logo grande, promesa clara y dos llamados a la acción.
+         ============================================================ -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="contenedor hero__interior">
+
+        <div class="hero__texto">
+          <p class="hero__sello">✦ Producción artesanal ✦</p>
+          <h1 id="hero-titulo">
+            <span class="hero__script">Churros</span>
+            <span class="hero__serif">COCO</span>
+          </h1>
+          <p class="hero__subtitulo">
+            Churros artesanales recién hechos, dulces y salados,
+            en Gualeguaychú y Concepción del Uruguay. Hacemos envíos.
+          </p>
+          <div class="hero__acciones">
+            <a href="#menu" class="boton boton--primario">Ver el menú</a>
+            <a href="#contacto" class="boton boton--whatsapp">Pedir por WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- ✏️ PLACEHOLDER DE FOTO PRINCIPAL:
+             Guardá tu mejor foto de churros como img/hero-churros.jpg,
+             borrá el <div class="foto-placeholder"> y descomentá el <img>. -->
+        <figure class="hero__foto">
+          <div class="foto-placeholder foto-placeholder--hero">
+            <span aria-hidden="true">📷</span>
+            <p><strong>FOTO PRINCIPAL</strong><br>Reemplazar por<br><code>img/hero-churros.jpg</code></p>
+          </div>
+          <!--
+          <img src="img/hero-churros.jpg"
+               alt="Bandeja de churros artesanales recién hechos, espolvoreados con azúcar"
+               width="640" height="640">
+          -->
+        </figure>
+
+      </div>
+
+      <!-- Onda decorativa que separa el amarillo del fondo crema.
+           aria-hidden porque es puro adorno: no aporta contenido. -->
+      <svg class="hero__onda" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <path d="M0,60 C240,100 480,10 720,40 C960,70 1200,20 1440,50 L1440,90 L0,90 Z" fill="var(--color-crema)"/>
+      </svg>
+    </section>
+
+    <!-- ============================================================
+         2. MENÚ / PRODUCTOS
+         Una tarjeta por categoría, con la píldora naranja de los
+         flyers como encabezado y precios con línea punteada.
+         ============================================================ -->
+    <section id="menu" class="seccion" data-reveal aria-labelledby="menu-titulo">
+      <div class="contenedor">
+        <p class="seccion__antetitulo">Precios churros</p>
+        <h2 id="menu-titulo">Nuestro menú</h2>
+        <p class="seccion__bajada">
+          Todo hecho en el día, en nuestros locales.
+          Pedí por unidad, media docena o docena.
+        </p>
+
+        <ul class="grid-menu">
+
+          <li class="categoria">
+            <header class="categoria__cabecera">
+              <h3>Simples</h3>
+              <p class="categoria__detalle">Sin relleno, con azúcar</p>
+            </header>
+            <ul class="categoria__items">
+              <li><span>Docena</span><span class="precio">$8.000</span></li>
+              <li><span>Media docena</span><span class="precio">$4.000</span></li>
+              <li><span>Unidad</span><span class="precio">$700</span></li>
+            </ul>
+          </li>
+
+          <li class="categoria categoria--destacada">
+            <p class="categoria__etiqueta">Los más pedidos</p>
+            <header class="categoria__cabecera">
+              <h3>Rellenos</h3>
+              <p class="categoria__detalle">Dulce de leche (clásico o al ron) · Membrillo · Pastelera · Batata</p>
+            </header>
+            <ul class="categoria__items">
+              <li><span>Docena</span><span class="precio">$10.000</span></li>
+              <li><span>Media docena</span><span class="precio">$5.000</span></li>
+              <li><span>Unidad</span><span class="precio">$1.000</span></li>
+              <li>
+                <span>Mini churros ×24 <small>(por pedido, para eventos o cumpleaños)</small></span>
+                <span class="precio">$10.000</span>
+              </li>
+            </ul>
+          </li>
+
+          <li class="categoria">
+            <header class="categoria__cabecera">
+              <h3>Bañados</h3>
+              <p class="categoria__detalle">Chocolate blanco o negro · Rellenos con dulce de leche</p>
+            </header>
+            <ul class="categoria__items">
+              <li><span>Docena</span><span class="precio">$13.000</span></li>
+              <li><span>Media docena</span><span class="precio">$6.500</span></li>
+              <li><span>Unidad</span><span class="precio">$1.500</span></li>
+            </ul>
+          </li>
+
+          <li class="categoria">
+            <header class="categoria__cabecera">
+              <h3>Salados</h3>
+              <p class="categoria__detalle">Roquefort · Cheddar · Cebolla · Aceituna · Ajo</p>
+            </header>
+            <ul class="categoria__items">
+              <li><span>Mini churros ×12 + salsa</span><span class="precio">$5.000</span></li>
+              <li><span>Mini churros ×6 + salsa</span><span class="precio">$4.000</span></li>
+              <li><span>Salsa adicional</span><span class="precio">$1.000</span></li>
+            </ul>
+          </li>
+
+          <li class="categoria">
+            <header class="categoria__cabecera">
+              <h3>Pan casero saborizado</h3>
+              <p class="categoria__detalle">Chicharrón · Cebolla · Orégano y queso</p>
+            </header>
+            <ul class="categoria__items">
+              <li><span>Unidad</span><span class="precio">$3.500</span></li>
+            </ul>
+          </li>
+
+          <li class="categoria">
+            <header class="categoria__cabecera">
+              <h3>Pasteles</h3>
+              <p class="categoria__detalle">Batata y membrillo</p>
+            </header>
+            <ul class="categoria__items">
+              <li><span>Docena</span><span class="precio">$12.000</span></li>
+              <li><span>Media docena</span><span class="precio">$6.000</span></li>
+              <li><span>Unidad</span><span class="precio">$1.000</span></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <p class="menu__cta">
+          ¿Ya elegiste? <a href="#contacto" class="boton boton--whatsapp">Hacé tu pedido</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. ¿POR QUÉ CHURROS COCO?
+         Solo valores respaldados por la información real del negocio.
+         ============================================================ -->
+    <section id="por-que" class="seccion seccion--amarilla" data-reveal aria-labelledby="porque-titulo">
+      <div class="contenedor">
+        <h2 id="porque-titulo">¿Por qué Churros Coco?</h2>
+
+        <ul class="grid-valores">
+          <li class="valor">
+            <span class="valor__icono" aria-hidden="true">🥖</span>
+            <h3>Producción artesanal</h3>
+            <p>Elaboramos nuestros churros de forma artesanal, como lo dice nuestro sello, todos los días en el local.</p>
+          </li>
+          <li class="valor">
+            <span class="valor__icono" aria-hidden="true">🍫</span>
+            <h3>Dulces y salados</h3>
+            <p>Rellenos de dulce de leche, membrillo o pastelera; bañados en chocolate; y minis salados con salsas.</p>
+          </li>
+          <li class="valor">
+            <span class="valor__icono" aria-hidden="true">🛵</span>
+            <h3>Hacemos envíos</h3>
+            <p>Escribinos por WhatsApp y te los llevamos, en Gualeguaychú y en Concepción del Uruguay.</p>
+          </li>
+          <li class="valor">
+            <span class="valor__icono" aria-hidden="true">🌅</span>
+            <h3>Desde la madrugada</h3>
+            <p>En Artigas 1639 (Gualeguaychú) abrimos de martes a domingo desde las 04:00. Churros calentitos a cualquier hora.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. GALERÍA
+         Grid editorial con tamaños mezclados. Cada celda es un
+         placeholder listo para reemplazar por una foto real.
+         ============================================================ -->
+    <section id="galeria" class="seccion" data-reveal aria-labelledby="galeria-titulo">
+      <div class="contenedor">
+        <h2 id="galeria-titulo">Para ir abriendo el apetito</h2>
+        <p class="seccion__bajada">
+          <!-- ✏️ Cuando tengas las fotos, borrá cada .foto-placeholder y
+               descomentá su <img>. Nombres sugeridos en cada celda. -->
+          Nuestros churros, recién salidos y azucarados.
+        </p>
+
+        <ul class="grid-galeria">
+          <li class="grid-galeria__celda grid-galeria__celda--grande">
+            <div class="foto-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p><code>img/galeria-1.jpg</code><br>Churros recién hechos</p>
+            </div>
+            <!-- <img src="img/galeria-1.jpg" alt="Bandeja de churros recién hechos con azúcar" loading="lazy" width="800" height="800"> -->
+          </li>
+          <li class="grid-galeria__celda">
+            <div class="foto-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p><code>img/galeria-2.jpg</code><br>Churros rellenos</p>
+            </div>
+            <!-- <img src="img/galeria-2.jpg" alt="Churros rellenos con dulce de leche" loading="lazy" width="400" height="400"> -->
+          </li>
+          <li class="grid-galeria__celda">
+            <div class="foto-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p><code>img/galeria-3.jpg</code><br>Bañados en chocolate</p>
+            </div>
+            <!-- <img src="img/galeria-3.jpg" alt="Churros bañados en chocolate" loading="lazy" width="400" height="400"> -->
+          </li>
+          <li class="grid-galeria__celda">
+            <div class="foto-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p><code>img/galeria-4.jpg</code><br>Minis salados</p>
+            </div>
+            <!-- <img src="img/galeria-4.jpg" alt="Mini churros salados con salsa" loading="lazy" width="400" height="400"> -->
+          </li>
+          <li class="grid-galeria__celda">
+            <div class="foto-placeholder">
+              <span aria-hidden="true">📷</span>
+              <p><code>img/galeria-5.jpg</code><br>El local</p>
+            </div>
+            <!-- <img src="img/galeria-5.jpg" alt="Frente del local de Churros Coco" loading="lazy" width="400" height="400"> -->
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. LOCALES, HORARIOS Y UBICACIÓN
+         Una tarjeta por local con horarios reales, mapa embebido
+         y botón "Cómo llegar" que abre Google Maps.
+         ============================================================ -->
+    <section id="locales" class="seccion seccion--crema" data-reveal aria-labelledby="locales-titulo">
+      <div class="contenedor">
+        <h2 id="locales-titulo">Locales y horarios</h2>
+        <p class="seccion__bajada">Tres locales, horario de corrido. Vení a buscarlos calentitos.</p>
+
+        <ul class="grid-locales">
+
+          <li class="local">
+            <header class="local__cabecera">
+              <p class="local__ciudad">Gualeguaychú</p>
+              <h3>📍 Rivadavia 657</h3>
+            </header>
+            <table class="local__horarios">
+              <caption class="sr-only">Horarios del local de Rivadavia 657</caption>
+              <tr><th scope="row">Martes a domingo</th><td>13:00 a 21:00 hs</td></tr>
+            </table>
+            <p class="local__nota">Horario de corrido</p>
+            <iframe
+              class="local__mapa"
+              src="https://www.google.com/maps?q=Rivadavia+657,+Gualeguaych%C3%BA,+Entre+R%C3%ADos,+Argentina&output=embed"
+              title="Mapa: Churros Coco en Rivadavia 657, Gualeguaychú"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a class="boton boton--secundario"
+               href="https://www.google.com/maps/search/?api=1&query=Rivadavia+657%2C+Gualeguaych%C3%BA%2C+Entre+R%C3%ADos%2C+Argentina"
+               target="_blank" rel="noopener">Cómo llegar</a>
+          </li>
+
+          <li class="local">
+            <header class="local__cabecera">
+              <p class="local__ciudad">Gualeguaychú</p>
+              <h3>📍 Artigas 1639</h3>
+            </header>
+            <table class="local__horarios">
+              <caption class="sr-only">Horarios del local de Artigas 1639</caption>
+              <tr><th scope="row">Lunes</th><td>13:00 a 21:00 hs</td></tr>
+              <tr><th scope="row">Martes a domingo</th><td>04:00 a 21:00 hs</td></tr>
+            </table>
+            <p class="local__nota">Horario de corrido · ¡Abrimos de madrugada!</p>
+            <iframe
+              class="local__mapa"
+              src="https://www.google.com/maps?q=Artigas+1639,+Gualeguaych%C3%BA,+Entre+R%C3%ADos,+Argentina&output=embed"
+              title="Mapa: Churros Coco en Artigas 1639, Gualeguaychú"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a class="boton boton--secundario"
+               href="https://www.google.com/maps/search/?api=1&query=Artigas+1639%2C+Gualeguaych%C3%BA%2C+Entre+R%C3%ADos%2C+Argentina"
+               target="_blank" rel="noopener">Cómo llegar</a>
+          </li>
+
+          <li class="local">
+            <header class="local__cabecera">
+              <p class="local__ciudad">Concepción del Uruguay</p>
+              <h3>📍 Posadas 896</h3>
+            </header>
+            <table class="local__horarios">
+              <caption class="sr-only">Horarios del local de Posadas 896</caption>
+              <tr><th scope="row">Lunes</th><td>Cerrado</td></tr>
+              <tr><th scope="row">Martes a domingo</th><td>13:00 a 20:30 hs</td></tr>
+            </table>
+            <p class="local__nota">Horario de corrido</p>
+            <iframe
+              class="local__mapa"
+              src="https://www.google.com/maps?q=Posadas+896,+Concepci%C3%B3n+del+Uruguay,+Entre+R%C3%ADos,+Argentina&output=embed"
+              title="Mapa: Churros Coco en Posadas 896, Concepción del Uruguay"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a class="boton boton--secundario"
+               href="https://www.google.com/maps/search/?api=1&query=Posadas+896%2C+Concepci%C3%B3n+del+Uruguay%2C+Entre+R%C3%ADos%2C+Argentina"
+               target="_blank" rel="noopener">Cómo llegar</a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. CONTACTO Y PEDIDOS
+         CTA final sobre fondo amarillo, con los dos WhatsApp reales,
+         teléfono e Instagram.
+         ============================================================ -->
+    <section id="contacto" class="seccion seccion--amarilla contacto" data-reveal aria-labelledby="contacto-titulo">
+      <div class="contenedor contenedor--angosto">
+        <h2 id="contacto-titulo">¿Se te antojaron? Pedí los tuyos</h2>
+        <p class="seccion__bajada">
+          Escribinos por WhatsApp al local de tu ciudad y coordinamos tu pedido.
+          <strong>Hacemos envíos.</strong>
+        </p>
+
+        <div class="contacto__tarjetas">
+          <article class="contacto-tarjeta">
+            <h3>Gualeguaychú</h3>
+            <a class="boton boton--whatsapp boton--ancho"
+               href="https://wa.me/5493446404545?text=%C2%A1Hola%20Churros%20Coco!%20Quiero%20hacer%20un%20pedido%20%F0%9F%98%8B"
+               target="_blank" rel="noopener">
+              Pedir por WhatsApp
+            </a>
+            <a class="contacto-tarjeta__tel" href="tel:+5493446404545">📞 3446-404545</a>
+          </article>
+
+          <article class="contacto-tarjeta">
+            <h3>Concepción del Uruguay</h3>
+            <a class="boton boton--whatsapp boton--ancho"
+               href="https://wa.me/5493442624939?text=%C2%A1Hola%20Churros%20Coco!%20Quiero%20hacer%20un%20pedido%20%F0%9F%98%8B"
+               target="_blank" rel="noopener">
+              Pedir por WhatsApp
+            </a>
+            <a class="contacto-tarjeta__tel" href="tel:+5493442624939">📞 3442-624939</a>
+          </article>
+        </div>
+
+        <p class="contacto__instagram">
+          Seguinos en Instagram:
+          <a href="https://www.instagram.com/churros_coco" target="_blank" rel="noopener">@churros_coco</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+
+      <div class="pie__columna pie__marca">
+        <p class="logo logo--pie">
+          <span class="logo__script">Churros</span>
+          <span class="logo__serif">COCO</span>
+        </p>
+        <p>Producción artesanal</p>
+      </div>
+
+      <nav class="pie__columna" aria-label="Navegación del pie de página">
+        <h3 class="pie__titulo">Secciones</h3>
+        <ul class="pie__lista">
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#por-que">¿Por qué Coco?</a></li>
+          <li><a href="#locales">Locales y horarios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="pie__columna">
+        <h3 class="pie__titulo">Locales</h3>
+        <ul class="pie__lista">
+          <li>Rivadavia 657, Gualeguaychú</li>
+          <li>Artigas 1639, Gualeguaychú</li>
+          <li>Posadas 896, Concepción del Uruguay</li>
+        </ul>
+      </div>
+
+      <div class="pie__columna">
+        <h3 class="pie__titulo">Contacto</h3>
+        <ul class="pie__lista">
+          <li><a href="https://wa.me/5493446404545" target="_blank" rel="noopener">WhatsApp Gchú: 3446-404545</a></li>
+          <li><a href="https://wa.me/5493442624939" target="_blank" rel="noopener">WhatsApp CdelU: 3442-624939</a></li>
+          <li><a href="https://www.instagram.com/churros_coco" target="_blank" rel="noopener">Instagram: @churros_coco</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="contenedor pie__copy">
+      <p>&copy; <span id="anio-actual">2026</span> Churros Coco. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
